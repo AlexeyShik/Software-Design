@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS TurnstileEvents;
+
+DROP TABLE IF EXISTS TicketEvents;

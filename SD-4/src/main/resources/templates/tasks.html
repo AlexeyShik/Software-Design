@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title>Tasks</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td th:text="Id"/>
+        <td th:text="Name"/>
+        <td th:text="Description"/>
+        <td th:text="Complexity"/>
+        <td th:text="Significance"/>
+        <td th:text="Completed"/>
+    </tr>
+    <th:block th:each="task : ${tasks}">
+        <tr>
+            <td th:text="${task.getId()}"/>
+            <td th:text="${task.getName()}"/>
+            <td th:text="${task.getDescription()}"/>
+            <td th:text="${task.getComplexity()}"/>
+            <td th:text="${task.getSignificance()}"/>
+            <td th:text="${task.isCompleted()} ? 'YES' : 'NO'"/>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

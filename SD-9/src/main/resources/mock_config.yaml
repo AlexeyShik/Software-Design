@@ -1,0 +1,33 @@
+ttl: 3
+unit: SECONDS
+amount: 15
+mockEngines:
+  - name: Yandex
+    url: dzen.ru
+    cache:
+      cat:
+        - cat.com
+        - cats2.ru
+      football:
+        - rfpl.ru
+        - worldcup.com
+        - fifa.com
+  - name: Google
+    url: google.com
+    cache:
+      cat:
+        - cat_stories.com
+        - cats_eng.en
+      football:
+        - apl.en
+        - worldcup.com
+        - fifa.com
+  - name: Bing
+    url: bing.com
+    cache:
+      cat:
+        - cat_microsoft_cat.com
+        - cats_windows.ru
+      football:
+        - worldcup.com
+        - soccer.com

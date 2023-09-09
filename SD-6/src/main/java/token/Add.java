@@ -1,0 +1,18 @@
+package token;
+
+public class Add extends Operation {
+
+    public Add() {
+        super(LOW_PRIORITY);
+    }
+
+    @Override
+    public String getSymbol() {
+        return "+";
+    }
+
+    @Override
+    public double evaluate(double x, double y) {
+        return x + y;
+    }
+}

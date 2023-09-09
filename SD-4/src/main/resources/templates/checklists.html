@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title>Checklists</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td th:text="Id"/>
+        <td th:text="Name"/>
+        <td th:text="Description"/>
+    </tr>
+    <th:block th:each="checklist : ${checklists}">
+        <tr>
+            <td th:text="${checklist.getId()}"/>
+            <td th:text="${checklist.getName()}"/>
+            <td th:text="${checklist.getDescription()}"/>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

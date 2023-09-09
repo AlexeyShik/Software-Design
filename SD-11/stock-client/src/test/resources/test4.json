@@ -1,0 +1,9 @@
+[
+  {
+    "stockId":2,
+    "stockName":"stock2",
+    "companyName":"company2",
+    "amount":5,
+    "price":5.0
+  }
+]

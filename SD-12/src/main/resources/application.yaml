@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/sd12
+    username: postgres
+    password: postgres
+    name: sd12
+
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+
+  liquibase:
+    change-log: db/changelog/changelog-master.yaml
+    url: jdbc:postgresql://localhost:5432/sd12
+    user: postgres
+    password: postgres
+
+logging:
+  level:
+    root: INFO

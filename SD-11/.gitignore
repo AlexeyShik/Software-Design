@@ -1,0 +1,14 @@
+stock-client/target
+stock-market/target/classes
+stock-market/target/docker
+stock-market/target/generated-sources
+stock-market/target/lib
+stock-market/target/maven-archiver
+stock-market/target/maven-status
+client.mv.db
+client.trace.db
+market.mv.db
+SD-11.iml
+stock-market/stock-market.iml
+stock-client/stock-client.iml
+.idea

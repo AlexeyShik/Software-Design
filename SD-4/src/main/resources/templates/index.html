@@ -1,0 +1,89 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title>Checklists</title>
+</head>
+<body>
+
+<h3>Add new task</h3>
+<form th:object="${task}" method="POST" action="/add-task">
+    <table>
+        <tr>
+            <td><label>Name:</label></td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td><label>Description:</label></td>
+            <td><input type="text" th:field="*{description}"/></td>
+        </tr>
+        <tr>
+            <td><label>Complexity:</label></td>
+            <td><input type="number" th:field="*{complexity}"/></td>
+        </tr>
+        <tr>
+            <td><label>Significance:</label></td>
+            <td><input type="number" th:field="*{significance}"/></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="add">
+</form>
+
+<h3>Add new checklist</h3>
+<form th:object="${checklist}" method="POST" action="/add-checklist">
+    <table>
+        <tr>
+            <td><label>Name:</label></td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td><label>Description:</label></td>
+            <td><input type="text" th:field="*{description}"/></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="add">
+</form>
+
+<h3>Complete task</h3>
+<form th:object="${task}" method="POST" action="/complete-task">
+    <table>
+        <tr>
+            <td><label>Id:</label></td>
+            <td><input type="number" th:field="*{id}"/></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="complete">
+</form>
+
+<h3>Assign task</h3>
+<form th:object="${assignRequest}" method="POST" action="/assign-task">
+    <table>
+        <tr>
+            <td><label>Task Id:</label></td>
+            <td><input type="number" th:field="*{taskId}"/></td>
+        </tr>
+        <tr>
+            <td><label>Checklist Id:</label></td>
+            <td><input type="number" th:field="*{checklistId}"/></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="assign">
+</form>
+
+<h3>Delete checklist</h3>
+<form th:object="${checklist}" method="POST" action="/delete-checklist">
+    <table>
+
+        <tr>
+            <td><label>Id:</label></td>
+            <td><input type="number" th:field="*{id}"/></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="delete">
+</form>
+</body>
+</html>

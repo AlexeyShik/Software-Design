@@ -1,0 +1,23 @@
+[
+  {
+    "stockId":5,
+    "stockName":"stock5",
+    "companyName":"company5",
+    "amount":2,
+    "price":300.0
+  },
+  {
+    "stockId":6,
+    "stockName":"stock6",
+    "companyName":"company6",
+    "amount":3,
+    "price":20.0
+  },
+  {
+    "stockId":7,
+    "stockName":"stock7",
+    "companyName":"company7",
+    "amount":10,
+    "price":10.0
+  }
+]
